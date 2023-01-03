@@ -16,7 +16,7 @@ with [code markers](https://book.kubebuilder.io/reference/markers.html). I knew 
 but found the interface very complex. What was a [`Decl`](https://pkg.go.dev/go/ast#Decl) and when
 is something a `GenDecl` vs `FuncDecl`? How do I figure out what the type of an object is (i.e.
 `struct` vs `func` vs something else)? And once I actually retrieve the right `Decl`, how do I get
-it's name or what its members / fields are?
+its name or what its members / fields are?
 
 The goal of `aster` was to be able to say "here's a pattern, find me all objects that have
 comments matching it attached, and tell me what they are and, if applicable, what their fields are".
