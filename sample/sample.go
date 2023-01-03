@@ -1,10 +1,10 @@
 package sample
 
-//aster: hello
+// aster: hello
 type Sample struct {
-  // Text is some sample text
-  Text string
+	// Text is some sample text
+	Text string
 }
 
-//aster: hello again
+// aster: hello again
 func (s Sample) Sampler() {}
