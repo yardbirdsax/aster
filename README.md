@@ -19,5 +19,5 @@ is something a `GenDecl` vs `FuncDecl`? How do I figure out what the type of an 
 its name or what its members / fields are?
 
 The goal of `aster` was to be able to say "here's a pattern, find me all objects that have
-comments matching it attached, and tell me what they are and, if applicable, what their fields are".
+comments matching it attached, and tell me what they are and, if applicable, what their fields are."
 For a simple example, see the [`astersample`](cmd/astersample/main.go) program.
