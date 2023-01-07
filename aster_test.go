@@ -33,8 +33,8 @@ func TestGetPackageComment(t *testing.T) {
 	}
 
 	for _, tc := range tests {
+		tc := tc
 		t.Run(tc.name, func(t *testing.T) {
-			tc := tc
 			t.Parallel()
 
 			actualPackageComment := aster.FromDirectory(tc.directory).Packages(tc.packages).PackageComment()
