@@ -9,6 +9,7 @@ import (
 	"go/parser"
 	"go/token"
 	"regexp"
+	"sort"
 	"strings"
 )
 
@@ -64,13 +65,18 @@ func (a *Aster) PackageComment() string {
 	packageComments := []string{}
 
 	for pkgName, pkg := range a.packages {
+		var b strings.Builder
 		if len(a.packages) > 1 {
-			packageComments = append(packageComments, pkgName+":\n")
+			b.WriteString(pkgName + ":\n")
 		}
 		for _, f := range pkg.Files {
-			packageComments = append(packageComments, f.Doc.Text())
+			b.WriteString(f.Doc.Text())
 		}
+
+		packageComments = append(packageComments, b.String())
 	}
+
+	sort.Strings(packageComments)
 
 	return strings.Join(packageComments, "")
 }
